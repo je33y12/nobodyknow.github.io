@@ -43,10 +43,10 @@ jobs:
           ref: ${{ env.GIT_DEPLOY_BRANCH }}
           path: .deploy_git
 
-      - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v1
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node_version }}
+          node-version: '16.17.1'
 
       - name: Configuration environment
         env:
